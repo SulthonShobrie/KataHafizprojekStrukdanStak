@@ -29,3 +29,16 @@ void InitializeStack(Stack *M) {
 int Full(Stack *M) {
     return (M->Count == MAXSTACK);
 }
+int Empty(Stack *M) {
+    return (M->Count == 0);
+}
+void Pop(Stack *M, itemType *S) {
+    if (M->Count == 0)
+    {
+        cout << "Stack masih kosong" << endl;
+    } else {
+        --(M->Count);
+        *S = M->Item[M->Count];
+    }
+    
+}
