@@ -62,7 +62,6 @@ void Push(Stack *M, itemType S) {
         ++(M->Count);
     }
 }
-}
 
 void display(Stack *M) {
     cout << "Menampilkan data stack" << endl;
