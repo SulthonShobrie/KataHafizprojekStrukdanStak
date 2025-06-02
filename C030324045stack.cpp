@@ -23,3 +23,9 @@ int main(int argc, char const *argv[])
     
     return 0;
 }
+void InitializeStack(Stack *M) {
+    M->Count = 0;
+}
+int Full(Stack *M) {
+    return (M->Count == MAXSTACK);
+}
