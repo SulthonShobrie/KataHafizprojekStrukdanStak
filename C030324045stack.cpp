@@ -16,6 +16,7 @@ void InitializeStack(Stack *M);
 int Empty(Stack *M);
 void Pop(Stack *M, itemType *S);
 void Push(Stack *M, itemType S);
+void display(Stack *M);
 
 int main(int argc, char const *argv[])
 {
@@ -42,11 +43,19 @@ void Pop(Stack *M, itemType *S) {
     }
     
 }
-void Push(Stack *S, itemType x) {
-    if (S->Count == MAXSTACK) {
+void Push(Stack *M, itemType S) {
+    if (M->Count == MAXSTACK) {
         cout << "Stack sudah penuh" << endl;
     } else {
-        S->Item[S->Count] = x;
-        ++(S->Count);
+        M->Item[M->Count] = S;
+        ++(M->Count);
+    }
+}
+void Push(Stack *M, itemType S) {
+    if (M->Count == MAXSTACK) {
+        cout << "Stack sudah penuh" << endl;
+    } else {
+        M->Item[M->Count] = S;
+        ++(M->Count);
     }
 }
