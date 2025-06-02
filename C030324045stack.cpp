@@ -20,7 +20,18 @@ void display(Stack *M);
 
 int main(int argc, char const *argv[])
 {
-    cout << "Hello Dunia!" << endl;
+    Stack M;
+    itemType S;
+
+    InitializeStack(&M);
+
+    Push(&M, 2);
+    Push(&M, 5);
+    Push(&M, 9);
+    Push(&M, 1);
+    Push(&M, 3);
+    Pop(&M, &S);
+    display(&M);
     
     return 0;
 }
