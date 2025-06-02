@@ -51,11 +51,14 @@ void Push(Stack *M, itemType S) {
         ++(M->Count);
     }
 }
-void Push(Stack *M, itemType S) {
-    if (M->Count == MAXSTACK) {
-        cout << "Stack sudah penuh" << endl;
-    } else {
-        M->Item[M->Count] = S;
-        ++(M->Count);
+}
+
+void display(Stack *M) {
+    cout << "Menampilkan data stack" << endl;
+
+    for (int i = (M->Count) - 1; i >= 0; --i)
+    {
+        cout << M->Item[i] << endl;
     }
+    
 }
